@@ -26,7 +26,7 @@ def is_valid(s):
 
 
 
-    punc = ['.', ',', ':', '#']
+    punc = ['.', ',', ':', '#', ' ']
     for char2 in s:
         if char2 in punc:
             return False
