@@ -9,10 +9,10 @@ def main():
 def is_valid(s):
 
     test1 = s[:2]
-    for char3 in test1:
-        if char3.isalpha():
+    for char1 in test1:
+        if char1.isalpha():
             continue
-        if char3.isdigit():
+        if char1.isdigit():
             return False
 
 
@@ -27,34 +27,34 @@ def is_valid(s):
 
 
     punc = ['.', ',', ':', '#']
-    for char4 in s:
-        if char4 in punc:
+    for char2 in s:
+        if char2 in punc:
             return False
 
 
 
 
     string = ''
-    for char in s:
-        if char.isalpha():
+    for char3 in s:
+        if char3.isalpha():
             continue
 
-        if char.isdigit():
-            string = s[s.index(char):]
+        if char3.isdigit():
+            string = s[s.index(char3):]
             break
 
     if string and string[0] == '0':
         return False
 
-    for char2 in string:
-        if char2.isdigit():
+    for char4 in string:
+        if char4.isdigit():
             continue
-        if char2.isalpha():
+        if char4.isalpha():
             return False
 
     else:
         return True
 
 
-
-main()
+if __name__ == "__main__":
+    main()
