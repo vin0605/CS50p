@@ -10,17 +10,15 @@ menu = {
     "Tortilla Salad": 8.00
 }
 
-lowermenu = {key.lower() : value for key, value in menu.items()}
-
 price = 0
 
 while True:
     try:
-        item = input('Item: ').lower()
-        if item in lowermenu:
-            price += round(lowermenu[item], 2)
-            zaprice = format(price, ".2f")
-            print(f'Total: ${zaprice}')
+        item = input('Item: ').title()
+        if item in menu:
+            price += round(menu[item], 2)
+            final_price = format(price, ".2f")
+            print(f'Total: ${final_price}')
             continue
 
     except EOFError:
